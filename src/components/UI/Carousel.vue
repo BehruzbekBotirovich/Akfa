@@ -10,7 +10,7 @@
                     </div>
                     <div class="  w-1/2  md:px-8 py-4 md:py-12 ">
                         <h1 class="text-orange-500  md:mb-6 text-3xl  font-semibold"></h1>
-                        <p class="md:w-2/3 mb-2 md:mb-6 font-semibold">THERMO 64 — ТЁПЛАЯ СЕРИЯ </p>
+                        <p class="md:w-2/3 mb-2 md:mb-6 font-semibold">{{ item.name }}</p>
                         <!-- parametri -->
                         <div class="line">
                             <span>Монтажная глубина: </span>
@@ -62,6 +62,7 @@ const carousel = ref(null);
 
 const items = [
     {
+        name: "THERMO 64 — ТЁПЛАЯ СЕРИЯ ",
         img: 'https://akfa.com.ua/wp-content/uploads/2018/02/main-bd38184ee5.png',
         montaj: '64 мм',
         weight: "1.2-1.5-2.0 мм",
