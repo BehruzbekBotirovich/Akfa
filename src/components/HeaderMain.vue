@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed top-0 left-0 z-10 bg-white w-full shadow-md">
+    <header class="fixed top-0 left-0 z-20 bg-white w-full shadow-md">
         <div class="flex gap-10 py-4 main-container justify-between">
             <div><img src="../assets/images/logo.png" width="60" height="60"></div>
 
