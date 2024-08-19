@@ -98,7 +98,6 @@
 <script setup>
 import { ref } from 'vue';
 import ZamerIcon from '../icons/ZamerIcon.vue'
-import SchyotIcon from '../icons/SchyotIcon.vue'
 
 import dacha1 from '@/assets/slide_images/dacha1.jpg'
 import dacha2 from '@/assets/slide_images/dacha2.jpg'

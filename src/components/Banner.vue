@@ -6,24 +6,24 @@
             <!-- addффф -->
             <div class="content relative w-1/2" style="z-index: 3;">
                 <h1 data-aos="fade-right" data-aos-duration="500" data-aos-delay="200"
-                    class="text-semibold text-2xl text-orange-600">Glass Pro -</h1>
+                    class="text-bold text-4xl text-cyan-200">Glass Pro -</h1>
                 <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="200"
-                    class="sm:text-2xl lg:text-4xl font-thin text-white"> Профессиональный подход к остеклению</p>
+                    class="sm:text-2xl lg:text-5xl font-semibold text-white"> Профессиональный подход к остеклению</p>
                 <div class="flex justify-between gap-4  sm:mt-6 lg:mt-12">
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                        <div><img src="../assets/images/Sloy.png" alt=""></div>
+                        <Sloy1Icon></Sloy1Icon>
                         <p class="text-white  xl:w-48 ml-4 mt-2">Современные окна и балконные конструкции по доступным
                             ценам
                         </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                        <div><img src="../assets/images/Sloy2.png" alt=""></div>
+                        <Sloy2Icon></Sloy2Icon>
                         <p class="text-white  xl:w-48 ml-2 mt-2">Современные окна и балконные конструкции по доступным
                             ценам
                         </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-                        <div><img src="../assets/images/Sloy3.png" alt=""></div>
+                        <Sloy3Icon></Sloy3Icon>
                         <p class="text-white  xl:w-48 mt-2">Современные окна и балконные конструкции по доступным ценам
                         </p>
                     </div>
@@ -45,8 +45,7 @@
                         <a-input v-model:value="form.tel" class="bg-gray-100 h-12" placeholder="Ваш номер телефона" />
                     </a-form-item>
                     <a-form-item class="flex justify-center">
-                        <a-button type="primary" @click="submitForm" html-type="submit"
-                            class="mt-4 px-10 h-12 bg-indigo-950">
+                        <a-button type="primary" @click="submitForm" html-type="submit" class="mt-4 px-10 h-12">
                             Отправить сообщение
                         </a-button>
                     </a-form-item>
@@ -59,7 +58,13 @@
 
 <script setup>
 import { ref } from 'vue';
-import { message } from 'ant-design-vue'; // Импортируем уведомления
+import { message } from 'ant-design-vue'; //Импортируем уведомления
+
+import Sloy1Icon from '../components/icons/Sloy1Icon.vue'
+import Sloy2Icon from '../components/icons/Sloy2Icon.vue'
+import Sloy3Icon from '../components/icons/Sloy3Icon.vue'
+
+
 
 const formRef = ref(null);
 const form = ref({
@@ -147,7 +152,7 @@ const submitForm = () => {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../assets/images/bgImg.png');
+    background-image: url('../assets/images/bg.webp');
 }
 
 
@@ -156,7 +161,7 @@ const submitForm = () => {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #1e3071c6;
+    background: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
 }

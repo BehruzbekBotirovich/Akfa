@@ -80,7 +80,7 @@ const handleOk = e => {
     width: 100%;
     height: 100%;
     padding: 30px 70px 80px 70px;
-    background-image: url('../assets/images/zavodBG.png');
+    background-image: url('../assets/images/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }

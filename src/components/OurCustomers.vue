@@ -3,8 +3,9 @@
 
 
         <div class="main-container py-10">
+            <h3 class="text-gray-500 py-4">Мы любим и ценим всех наших клиентов </h3>
             <div class="flex items-center justify-between mb-10">
-                <h1 class="font-semibold text-4xl ">Наши  проекты </h1>
+                <h1 class="font-semibold text-4xl ">Наши клиенты </h1>
                 <div class="flex gap-2">
                     <button @click="prevSlide" class="nav-button">
                         <LeftOutlined />
@@ -14,7 +15,7 @@
                     </button>
                 </div>
             </div>
-            <a-carousel ref="carousel" :dots="false" :slidesToShow="3" :infinite="true" :autoplay="true"
+            <a-carousel ref="carousel" :dots="false" :slidesToShow="5" :infinite="true" :autoplay="true"
                 :autoplaySpeed="4000">
                 <div v-for="img in images" class="carousel-card ">
                     <a-image :src="img"> </a-image>

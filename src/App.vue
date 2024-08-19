@@ -11,6 +11,8 @@ import FaqAsk from './components/FaqAsk.vue'
 import ContactUs from './components/ContactUs.vue'
 import FooterEnd from './components/FooterEnd.vue'
 import Map from './components/Map.vue'
+import OurCustomers from './components/OurCustomers.vue'
+import Banner2 from './components/Banner2.vue'
 </script>
 
 <template>
@@ -31,11 +33,12 @@ import Map from './components/Map.vue'
 
     </div>
     <Portfolio></Portfolio>
-    <Map />
+    <Banner2></Banner2>
+    <OurCustomers></OurCustomers>
     <div id="faq">
         <FaqAsk></FaqAsk>
-
     </div>
+    <Map />
     <div id="contact">
         <ContactUs></ContactUs>
     </div>
