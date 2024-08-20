@@ -2,16 +2,16 @@
 
     <!-- about company -->
     <div class="md:flex mb-20">
-        <div class="md:w-1/2 relative hovering" @click="ShowVideo = true">
+        <div class="md:w-1/3 relative hovering" @click="ShowVideo = true">
             <img class="w-full h-full object-cover aspect-square covering-img  "
                 src="https://www.rehau.com/resource/image/878972/7x5/400/286/6d38342cfbb3403b57585480163395a7/50A14EDDED1D1AD02C7D8B7E8E0AB618/793-d003-cl-1082233.jpg">
 
             <img class="play-btn" src="./img/PlayBtn.png" alt="">
         </div>
-        <div class="lg:flex md:w-1/2 md:p-12">
-            <div class="hidden md:block lg:w-1/2 "> <img src="./img/logo.png" width="200" height="120" alt=""> </div>
+        <div class="lg:flex md:w-2/3 md:p-12 items-center">
+            <div class="hidden md:block w-1/2 mr-6 "> <img src="./img/logo.png" width="200" height="120" alt=""> </div>
             <h3 class="font-bold md:hidden py-2">О нас </h3>
-            <p class=" lg:w-1/2 flex ">Мы помогаем клиентам подбирать решения, учитывая пожежелания к
+            <p class=" flex ">Мы помогаем клиентам подбирать решения, учитывая пожежелания к
                 характеристикам окна и
                 его стоимости.
                 Окно - это объект, которым Вы будете пользоваться много лет, поэтому для нас очень важно, чтобы Вы

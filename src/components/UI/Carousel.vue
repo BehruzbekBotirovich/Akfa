@@ -1,5 +1,5 @@
 <template>
-    <div class="relative main-container">
+    <div class="relative main-container mb-12   ">
 
         <a-carousel ref="carousel" dots="false" class="w4 self-center" :infinite="true">
             <div v-for="(item, index) in items" :key="index">
