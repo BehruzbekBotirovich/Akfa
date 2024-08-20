@@ -32,7 +32,7 @@
             </div>
 
             <!-- форма -->
-            <div class="relative z-10 bg-white px-16 pt-10 w-1/3 rounded-xl">
+            <div class="relative z-10 bg-white px-16 pt-10 w-1/3 rounded-xl" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
                 <h1 class="font-bold text-lg text-center">Вызвать замерщика</h1>
                 <a-form :model="form" :rules="rules" ref="formRef" layout="vertical" @submit.prevent="submitForm">
                     <a-form-item label="Имя" name="name">

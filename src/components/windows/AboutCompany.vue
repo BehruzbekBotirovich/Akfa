@@ -20,8 +20,8 @@
     </div>
 
     <!-- about company card-->
-    <a-row :gutter="[24, 24]" data-aos="zoom-in" data-aos-delay="200">
-        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4  items-center" data-aos="zoom-in" data-aos-delay="200">
+    <a-row :gutter="[24, 24]" >
+        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4  items-center" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
             <div><img class="icon-img" src="./img/prof1.png" alt=""></div>
             <div style="width: 260px;">
                 <h3 class="font-semibold lg:text-lg md:mb-2">Профессионализм</h3>
@@ -29,7 +29,7 @@
             </div>
         </a-col>
 
-        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4  items-center">
+        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4  items-center" data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
             <div><img class="icon-img" src="./img/prof2.png" alt=""></div>
             <div style="width: 260px;">
                 <h3 class="font-semibold lg:text-lg md:mb-2">Ценообразование</h3>
@@ -37,7 +37,7 @@
             </div>
         </a-col>
 
-        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4 items-center">
+        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4 items-center"  data-aos="fade-down" data-aos-duration="500" data-aos-delay="400">
             <div><img class="icon-img" src="./img/prof3.png" alt=""></div>
             <div style="width: 260px;">
                 <h3 class="font-semibold lg:text-lg md:mb-2"> Мобильность </h3>
@@ -45,7 +45,7 @@
             </div>
         </a-col>
 
-        <a-col :xs="24" :sm="12" :lg="8" class="flex gap-4 items-center">
+        <a-col :xs="24" :sm="12" :lg="8" class="flex gap-4 items-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
             <div><img class="icon-img" src="./img/prof4.png" alt=""></div>
             <div style="width: 260px;">
                 <h3 class="font-semibold lg:text-lg md:mb-2">Лояльность </h3>
@@ -53,7 +53,7 @@
             </div>
         </a-col>
 
-        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4  items-center">
+        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4  items-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
             <div><img class="icon-img" src="./img/prof5.png" alt=""></div>
             <div style="max-width: 260px;">
                 <h3 class="font-semibold lg:text-lg md:mb-2"> Скорость </h3>
@@ -61,7 +61,7 @@
             </div>
         </a-col>
 
-        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4 items-center">
+        <a-col :xs="24" :md="12" :lg="8" class="flex gap-4 items-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
             <div><img class="icon-img" src="./img/prof6.png" alt=""></div>
             <div style="width: 260px;">
                 <h3 class="font-semibold lg:text-lg md:mb-2"> Служба качества </h3>

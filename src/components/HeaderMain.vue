@@ -79,7 +79,6 @@ import ZamerWindow from './windows/ZamerWindow.vue'
 import { ref, onMounted, onUnmounted } from 'vue';
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue';
 const activeSection = ref('');
-const showZamer = ref(false);
 const showMobileMenu = ref(false); // State to show/hide mobile menu
 
 // moldalka ant vue

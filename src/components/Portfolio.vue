@@ -4,7 +4,7 @@
 
         <div class="main-container py-10">
             <div class="flex items-center justify-between mb-10">
-                <h1 class="font-semibold text-4xl ">Наши  проекты </h1>
+                <h1 class="font-semibold text-4xl ">Наши проекты </h1>
                 <div class="flex gap-2">
                     <button @click="prevSlide" class="nav-button">
                         <LeftOutlined />
@@ -16,10 +16,12 @@
             </div>
             <a-carousel ref="carousel" :dots="false" :slidesToShow="3" :infinite="true" :autoplay="true"
                 :autoplaySpeed="4000">
-                <div v-for="img in images" class="carousel-card ">
+                <div v-for="(img, index) in images" :key="index" class="carousel-card" data-aos="fade-down"
+                    data-aos-duration="400" :data-aos-delay="(index + 1) * 300">
                     <a-image :src="img"> </a-image>
                 </div>
             </a-carousel>
+
         </div>
 
 

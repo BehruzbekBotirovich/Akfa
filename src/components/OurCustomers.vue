@@ -18,7 +18,7 @@
             <a-carousel ref="carousel" :dots="false" :slidesToShow="5" :infinite="true" :autoplay="true"
                 :autoplaySpeed="4000">
                 <div v-for="img in images" class="carousel-card ">
-                    <a-image :src="img"> </a-image>
+                    <img :src="img" alt="">
                 </div>
             </a-carousel>
         </div>
@@ -27,7 +27,6 @@
     </div>
 
 </template>
-
 <script setup>
 import { ref } from 'vue';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue';
@@ -61,8 +60,11 @@ const nextSlide = () => {
 }
 
 :deep(.carousel-card img) {
-    aspect-ratio: 1/1;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
 }
 
 .nav-button {

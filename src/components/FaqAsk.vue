@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container mt-12" data-aos="zoom-in" data-aos-delay="100">
+    <div class="main-container mt-12">
         <a-collapse v-model:activeKey="activeKey" accordion>
             <h1 class="text-white text-2xl font-semibold text-center mb-10">Вопрос-ответ</h1>
 
