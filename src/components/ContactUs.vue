@@ -1,13 +1,13 @@
 <template>
     <div class="main-container py-12">
-        <h1 class="text-indigo-950 text-xl text-center font-semibold mb-12">Контакты</h1>
+        <h1 class="text-indigo-950 text-xl text-center font-semibold mb-4 md:mb-12">Контакты</h1>
 
-        <div class="flex  ">
-            <div class="w-1/2 space-y-4 pb-20 px-8 relative">
+        <div class="md:flex ">
+            <div class="md:w-1/2 space-y-4 pb-20 px-8 relative">
                 <h1 class="text-lg font-semibold">Бесплатная консультация: </h1>
                 <div class="flex items-center gap-4 ">
                     <TelIcon></TelIcon>
-                    <ul class="flex gap-10 w-full  text-xl">
+                    <ul class="flex gap-10 w-full  md:text-xl">
                         <li class="font-bold">{{ telnumber1 }}</li>
                         <li class="font-bold">{{ telnumber2 }}</li>
                     </ul>
@@ -19,7 +19,7 @@
                     <PochtaIcon></PochtaIcon>{{ email }}
                 </div>
 
-                <p class="w-2/5 py-6">Установку должны выполнять только эксперты. Нам доверяют сотни семей.
+                <p class=" md:w-2/5 py-6">Установку должны выполнять только эксперты. Нам доверяют сотни семей.
                     Узнайте поробнее, какие решения вам подходят.
                     Вы можете приобрести недорогие товары
                     при гарантированно
@@ -33,12 +33,7 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a :href=social.youtube target="_blank"> <img src=" ./icons/youtube.png" width="40" height="40">
-                        </a>
-                    </li>
-
-                    <li>
+                                        <li>
                         <a :href=social.twit target="_blank"> <img src=" ./icons/twitter.png" width="40" height="40">
                         </a>
                     </li>
@@ -54,11 +49,11 @@
                         </a>
                     </li>
                 </ul>
-                <div class="absolute bottom-0  -right-4 w-1/2"> <img src="../assets/images/workers.png" alt=""> </div>
+                <div class="absolute bottom-0  -right-4 w-1/3 md:w-1/2"> <img src="../assets/images/workers.png" alt=""> </div>
             </div>
 
 
-            <div class="w-1/2  py-12 px-20 shadow-2xl">
+            <div class="md:w-1/2 py-6  px-8 md:py-12 md:px-20 shadow-2xl">
                 <h1 class="text-center text-2xl font-semibold">Остались вопросы?</h1>
                 <a-form :model="form" :rules="rules" ref="formRef" layout="vertical" @submit.prevent="submitForm">
                     <a-form-item label="Имя" name="name">
@@ -68,7 +63,7 @@
                         <a-input v-model:value="form.email" class=" bg-gray-100 h-12" placeholder="Ваш email" />
                     </a-form-item>
                     <a-form-item label="Отзыв" name="message">
-                        <a-textarea v-model:value="form.message" class=" bg-gray-100 pb-12 no-resize"
+                        <a-textarea v-model:value="form.message" class=" bg-gray-100  md:pb-12 no-resize"
                             placeholder="Ваш отзыв" rows="4" />
                     </a-form-item>
                     <a-form-item class="flex justify-center">
@@ -167,7 +162,6 @@ const social = {
     insta: 'https://www.instagram.com/glass_pro.official',
     facebook: '#',
     twit: '#',
-    youtube: '#'
 }
 </script>
 

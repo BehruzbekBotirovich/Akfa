@@ -2,18 +2,18 @@
 
     <h1 class="text-3xl text-center mb-12 mt-8 font-semibold text-gray-800">Продукции</h1>
     <Carousel></Carousel>
-    <div class="bg-img my-16 relative">
-        <div class="main-container  relative ">
+    <div class="bg-img my-container mb-14 relative">
+        <div class="main-container  relative  ">
             <div class="relative text-white  mb-16" style="z-index: 2;">
                 <h1 class=" text-lg md:text-5xl font-extrabold text-center tracking-widest">AKFA</h1>
                 <p class="text-center  md:text-2xl">гарантия качества</p>
             </div>
 
 
-            <div class="flex justify-between relative" style="z-index: 2;">
+            <div class=" md:flex  space-y-2   justify-around relative gap-2 boxs" style="z-index: 2;">
                 <div data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
                     <div class="flex justify-center"><img src="../assets/images/Sloy01.png" alt=""></div>
-                    <h3 class="text-white text-center  w-28">Сертифицированный производитель Rehau </h3>
+                    <h3 class="text-white text-center  w-28">Сертифицированный производитель AKFA </h3>
                 </div>
 
                 <div data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
@@ -83,7 +83,32 @@ const handleOk = e => {
     background-image: url('../assets/images/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media(max-width:610px) {
+        padding: 10px 30px 20px 30px;
+    }
 }
+
+@media (max-width:610px) {
+    .boxs>div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 60px;
+        }
+    }
+
+    .boxs>div:nth-child(even) {
+        margin-left: 80px;
+    }
+
+
+}
+
+
+
 
 .blue-drop {
     position: absolute;

@@ -15,7 +15,7 @@
             <HowWorking v-if="how" />
         </transition>
 
-        
+
 
         <transition name="fade">
             <SertificateSlider v-if="sertifi" />
@@ -44,10 +44,15 @@ const showSection = (section) => {
 
 <style scoped>
 .navbar {
+    margin: 0 auto;
     display: flex;
     gap: 20px;
     justify-content: center;
     margin-bottom: 30px;
+
+    @media (max-width:610px) {
+        gap: 10px;
+    }
 }
 
 .navbar>li {
@@ -57,10 +62,19 @@ const showSection = (section) => {
     font-weight: 400;
     line-height: 21.09px;
     cursor: pointer;
+    text-wrap: nowrap;
+
+    @media (max-width:610px) {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
 }
 
 .navbar>li:hover {
-    background: #efefef;
+    background: #EF7F04;
+    color: white;
+    opacity: 0.6;
+    font-weight: 600;
 }
 
 .navbar>.active {

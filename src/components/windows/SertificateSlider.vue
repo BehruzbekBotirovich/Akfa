@@ -1,118 +1,107 @@
 <template>
-    <div class="relative py-8 shadow-lg">
-        <div class="carousel-container w-full  flex items-center justify-between">
-            <!-- Кнопки навигации -->
-            <button @click="prev" class="prev">
-                <svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 1L1 21L21 41" stroke="black" />
-                    <path d="M21 1L1 21L21 41" stroke="#8F8F8F" />
-                </svg>
-            </button>
-
-            <div class="carousel-wrapper w-11/12 overflow-hidden">
-                <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 25}%)` }">
-                    <div v-for="(img, index) in images" :key="index" class="img-container">
-                        <img :src="img.src" :alt="img.alt" class=" rasm">
-                    </div>
-                </div>
+    <div class="relative py-8 mb-4 shadow-lg">
+        <a-carousel :dots="false" :slides-to-show="slidesToShow" :infinite="true" draggable :autoplay="false"
+            ref="carousel">
+            <div v-for="(img, index) in images" :key="index" class="img-container">
+                <img :src="img.src" :alt="img.alt" class="rasm" />
             </div>
+        </a-carousel>
 
-            <button @click="next" class="next">
-                <svg width="22" height="42" viewBox="0 0 22 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.5 1L20.5 21L0.5 41" stroke="black" />
-                    <path d="M0.5 1L20.5 21L0.5 41" stroke="#8F8F8F" />
-                </svg>
-            </button>
-        </div>
+        <!-- Кнопки навигации -->
+        <button @click="prev" class="prev">
+            <LeftOutlined />
+        </button>
 
-        <!-- map -->
-        <div>
-        </div>
-
-
-
+        <button @click="next" class="next">
+            <RightOutlined />
+        </button>
     </div>
 </template>
-<script setup>
-import { ref } from 'vue';
 
+<script setup>
+import { ref, onMounted } from 'vue';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue'
 const images = ref([
-    { src: 'https://via.placeholder.com/200x200.png?text=serficate+3', alt: 'Sertificate 3' },
-    { src: 'https://via.placeholder.com/200x200.png?text=serficate+4', alt: 'Sertificate 4' },
-    { src: 'https://via.placeholder.com/200x200.png?text=serficate+5', alt: 'Sertificate 5' },
-    { src: 'https://via.placeholder.com/200x200.png?text=serficate+6', alt: 'Sertificate 6' },
-    { src: 'https://via.placeholder.com/200x200.png?text=serficate+7', alt: 'Sertificate 7' },
+    { src: 'https://via.placeholder.com/595x842.png?text=serficate+1', alt: 'Sertificate 1' },
+    { src: 'https://via.placeholder.com/595x842.png?text=serficate+2', alt: 'Sertificate 2' },
+    { src: 'https://via.placeholder.com/595x842.png?text=serficate+3', alt: 'Sertificate 3' },
+    { src: 'https://via.placeholder.com/595x842.png?text=serficate+4', alt: 'Sertificate 4' },
+    { src: 'https://via.placeholder.com/595x842.png?text=serficate+5', alt: 'Sertificate 5' },
 ]);
 
-const currentIndex = ref(0);
+const slidesToShow = ref(4);
+const carousel = ref(null);
+
+const updateSlidesToShow = () => {
+    if (window.innerWidth >= 768) {
+        slidesToShow.value = 4;
+    } else {
+        slidesToShow.value = 2;
+    }
+};
 
 const next = () => {
-    if (currentIndex.value < images.value.length - 4) {
-        currentIndex.value++;
-    }
+    carousel.value.next();
 };
 
 const prev = () => {
-    if (currentIndex.value > 0) {
-        currentIndex.value--;
-    }
+    carousel.value.prev();
 };
+
+onMounted(() => {
+    updateSlidesToShow();
+    window.addEventListener('resize', updateSlidesToShow);
+});
 </script>
+
 <style scoped>
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-wrapper {
-    overflow: hidden;
-}
-
 .rasm {
-    width: 15rem;
-    height: 15rem;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
 .img-container {
-    flex: 0 0 25%;
-    box-sizing: border-box;
     padding: 0 10px;
-}
-
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.next:hover svg path {
-    stroke: #f97316;
-    transition: all 0.2s ease-in;
-}
-
-.prev:hover svg path {
-    stroke: #f97316;
-    transition: all 0.2s ease-in;
 }
 
 .prev {
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: -40px;
     transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    padding: 0 10px;
+
+    @media (max-width:610px) {
+        top: calc(100% + 20px);
+        left: 40%;
+
+    }
 }
 
 .next {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: -40px;
     transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+
+    @media (max-width:610px) {
+        top: calc(100% + 20px);
+        right: 40%;
+    }
+}
+
+.next:hover,
+.prev:hover {
+    color: #f97316;
+    transition: all 0.2s ease-in;
 }
 </style>

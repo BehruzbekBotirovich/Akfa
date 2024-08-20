@@ -5,10 +5,12 @@
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
-body{
+
+body {
   background: white;
   color: black;
 }
+
 #app {
   /* background: #F2F2F2; */
 }

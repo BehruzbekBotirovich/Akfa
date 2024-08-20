@@ -1,7 +1,7 @@
 <template>
     <div class="main-container mt-12">
         <a-collapse v-model:activeKey="activeKey" accordion>
-            <h1 class="text-white text-2xl font-semibold text-center mb-10">Вопрос-ответ</h1>
+            <h1 class="text-white text-2xl font-semibold text-center mb-4 md:mb-10">Вопрос-ответ</h1>
 
             <a-collapse-panel v-for="item in SavolJavob " :header=item.savol>
                 <p>{{ item.javob }}</p>
@@ -39,6 +39,10 @@ const SavolJavob = [
 :deep(.ant-collapse) {
     padding: 50px;
     background: #EF7F1A;
+
+    @media (max-width:610px) {
+        padding: 20px;
+    }
 }
 
 :deep(.ant-collapse-item) {
@@ -46,11 +50,19 @@ const SavolJavob = [
     margin-bottom: 10px;
     border-radius: 5px !important;
     padding: 10px;
+
+    @media (max-width:610px) {
+        padding: 6px;
+    }
 }
 
 :deep(.ant-collapse-header-text) {
     font-size: 18px;
     font-weight: 700;
+
+    @media (max-width:610px) {
+        font-size: 14px;
+    }
 }
 
 :deep(.ant-collapse-header-text:hover) {

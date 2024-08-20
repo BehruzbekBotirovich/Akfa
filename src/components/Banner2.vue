@@ -1,11 +1,11 @@
 <template>
-   
+
     <div class="main-container mt-24">
         <img class="bg-img" src="../assets/images/bg4.webp" alt="">
     </div>
     <div class="banner  main-container">
-        <div class="p-12 bg-white    w-4/6 -translate-y-32">
-            <h1 class="font-bold text-5xl mb-4">Производственная компания <span class="text-blue-800 font-extrabold">
+        <div class="p-12 bg-white    md:w-4/6 -translate-y-32">
+            <h1 class=" leading-8  mb-4">Производственная компания <span class="text-blue-800 font-extrabold">
                     AKFA </span> высокого качество обслуживания с 2000 года
             </h1>
             <p>За это время мы завоевали доверие клиентов благодаря качественным изделиям и профессиональному подходу к
@@ -15,7 +15,7 @@
                 самых
                 взыскательных заказчиков. Доверьте нам создание вашего идеального оконного решения!
             </p>
-            <p>Мы гордимся своими технологическими возможностями и современным оборудованием, которые позволяют нам
+            <p class="hidden md:block">Мы гордимся своими технологическими возможностями и современным оборудованием, которые позволяют нам
                 создавать продукцию высокого качества с соблюдением всех стандартов и требований. Наше производство
                 основано
                 на инновациях и постоянном совершенствовании процессов, чтобы предложить нашим клиентам самое лучшее в
@@ -37,6 +37,10 @@ h1 {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
+
+    @media(max-width:610px) {
+        font-size: 20px;
+    }
 }
 
 p {
@@ -44,6 +48,11 @@ p {
     font-size: 18px;
     color: #475569;
     margin-bottom: 10px;
+
+    @media (max-width:610px) {
+        font-size: 16px ;
+    }
+
 }
 
 .banner {

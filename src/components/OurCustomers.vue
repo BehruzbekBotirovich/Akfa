@@ -15,7 +15,7 @@
                     </button>
                 </div>
             </div>
-            <a-carousel ref="carousel" :dots="false" :slidesToShow="5" :infinite="true" :autoplay="true"
+            <a-carousel ref="carousel" :dots="false" :slidesToShow="slidesToShow" :infinite="true" :autoplay="true"
                 :autoplaySpeed="4000">
                 <div v-for="img in images" class="carousel-card ">
                     <img :src="img" alt="">
@@ -28,7 +28,7 @@
 
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue';
 const images = ref([slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10])
 
@@ -45,13 +45,28 @@ import slide10 from '@/assets/images/client2.png';
 
 
 const carousel = ref(null);
-
+// navigator
 const prevSlide = () => {
     carousel.value.prev();
 };
 const nextSlide = () => {
     carousel.value.next();
 };
+
+// beqkpoints slide to show
+const slidesToShow = ref(4);
+const updateSlidesToShow = () => {
+    if (window.innerWidth >= 768) {
+        slidesToShow.value = 5;
+    } else {
+        slidesToShow.value = 3;
+    }
+};
+
+onMounted(() => {
+    updateSlidesToShow();
+    window.addEventListener('resize', updateSlidesToShow);
+});
 </script>
 
 <style scoped>

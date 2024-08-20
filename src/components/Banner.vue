@@ -1,10 +1,10 @@
 <template>
     <div class="bg-div relative mt-20">
         <div class="darking"></div>
-        <div class="main-container flex gap-12 items-center justify-between">
+        <div class="main-container lg:flex gap-12 items-center justify-between">
 
             <!-- addффф -->
-            <div class="content relative w-1/2" style="z-index: 3;">
+            <div class="content relative lg:w-1/2 mb-2" style="z-index: 3;">
                 <h1 data-aos="fade-right" data-aos-duration="500" data-aos-delay="200"
                     class="text-bold text-4xl text-cyan-200">Glass Pro -</h1>
                 <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="200"
@@ -32,7 +32,8 @@
             </div>
 
             <!-- форма -->
-            <div class="relative z-10 bg-white px-16 pt-10 w-1/3 rounded-xl" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
+            <div class="relative z-10 bg-white   p-4 md:px-16 md:pt-10 md:pb-4 lg:w-1/3  rounded-xl" data-aos="fade-left"
+                data-aos-duration="500" data-aos-delay="200">
                 <h1 class="font-bold text-lg text-center">Вызвать замерщика</h1>
                 <a-form :model="form" :rules="rules" ref="formRef" layout="vertical" @submit.prevent="submitForm">
                     <a-form-item label="Имя" name="name">
@@ -44,7 +45,7 @@
                     <a-form-item label="Телефон" name="tel">
                         <a-input v-model:value="form.tel" class="bg-gray-100 h-12" placeholder="Ваш номер телефона" />
                     </a-form-item>
-                    <a-form-item class="flex justify-center">
+                    <a-form-item class="flex justify-center ">
                         <a-button type="primary" @click="submitForm" html-type="submit" class="mt-4 px-10 h-12">
                             Отправить сообщение
                         </a-button>

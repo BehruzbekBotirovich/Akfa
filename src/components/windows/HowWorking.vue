@@ -1,26 +1,26 @@
 <template>
-    <div class="py-14 rounded-md bg-white my-shadow-custom">
+    <div class="py-6 md:py-14 rounded-md bg-white my-shadow-custom">
         <h1 class="title">Как мы работаем</h1>
-        <div class="flex items-center justify-between gap-8 px-10">
+        <div class="flex flex-wrap md:items-center md:justify-between px-4 md:px-10">
 
-            <div class="w-1/4">
-                <div class="flex justify-center mb-7">
+            <div class="w-1/2 p-2  md:w-1/4">
+                <div class="flex justify-center mb-2 md:mb-7">
                     <img src="./img/how1.png" alt="">
                 </div>
                 <h3 class="text-center  font-semibold text-lg uppercase"> Бесплатно приедем</h3>
                 <p class="text-center  "> Выезжаем бесплатно во все города Московской области </p>
             </div>
 
-            <div class="w-1/4">
-                <div class="flex justify-center mb-7">
+            <div class="w-1/2 p-2  md:w-1/4">
+                <div class="flex justify-center mb-2 md:mb-7">
                     <img src="./img/how2.png" alt="">
                 </div>
                 <h3 class="text-center  font-semibold text-lg uppercase"> Выезжаем ежедневно</h3>
                 <p class="text-center  "> С 9 до 21 без выходныхи праздников </p>
             </div>
 
-            <div class="w-1/4">
-                <div class="flex justify-center mb-8">
+            <div class="w-1/2 p-2  md:w-1/4">
+                <div class="flex justify-center mb-2 md:mb-7">
                     <img src="./img/how3.png" alt="">
                 </div>
                 <h3 class="text-center  font-semibold text-lg uppercase"> Образцы с собой</h3>
@@ -29,8 +29,8 @@
                     систем и материалов отделки</p>
             </div>
 
-            <div class="w-1/4">
-                <div class="flex justify-center mb-7">
+            <div class="w-1/2 p-2  md:w-1/4">
+                <div class="flex justify-center mb-2 md:mb-7">
                     <img src="./img/how4.png" alt="">
                 </div>
                 <h3 class="text-center  font-semibold text-lg uppercase"> Стоимость </h3>
