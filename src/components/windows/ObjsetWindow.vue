@@ -11,14 +11,6 @@
                 <h2>Остекление корпоративных объектов</h2>
                 <p>Реализуем сложные проекты по остеклению торговых центров,
                     ресторанов, производственных помещений и офисов</p>
-
-                <div class="flex gap-4 relative z-10">
-                    <a-button type="primary" @click="showZamer = true"
-                        class="flex items-center gap-2  w-1/2 justify-center h-12 rounded font-semibold text-white bg-orange-500">
-                        <ZamerIcon></ZamerIcon> Заявка на замер
-                    </a-button>
-                   
-                </div>
             </div>
         </div>
         <!-- info cards -->
@@ -97,7 +89,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import ZamerIcon from '../icons/ZamerIcon.vue'
 
 import object2 from '@/assets/slide_images/object2.jpg'
 import object3 from '@/assets/slide_images/object3.jpg'
@@ -107,7 +98,7 @@ import object6 from '@/assets/slide_images/object6.jpg'
 import object7 from '@/assets/slide_images/object7.jpg'
 
 const images = ref([
-     object4, object2, object3, object5, object6, object7
+    object4, object2, object3, object5, object6, object7
 ]);
 
 const carousel = ref(null);

@@ -1,7 +1,5 @@
 <template>
     <div class="bg-gray-100">
-
-
         <div class="main-container py-10">
             <h3 class="text-gray-500 py-4">Мы любим и ценим всех наших клиентов </h3>
             <div class="flex items-center justify-between mb-10">
@@ -30,18 +28,20 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue';
-const images = ref([slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10])
+const images = ref([slide1, slide2, slide3, slide4, slide5 , slide6])
 
 import slide1 from '@/assets/images/client1.png';
 import slide2 from '@/assets/images/client2.png';
 import slide3 from '@/assets/images/client2.png';
 import slide4 from '@/assets/images/client3.png';
-import slide5 from '@/assets/images/client4.png';
-import slide6 from '@/assets/images/client1.png';
-import slide7 from '@/assets/images/client2.png';
-import slide8 from '@/assets/images/client4.png';
-import slide9 from '@/assets/images/client3.png';
-import slide10 from '@/assets/images/client2.png';
+import slide5 from '@/assets/images/client5.png';
+import slide6 from '@/assets/images/client6.png';
+
+// import slide6 from '@/assets/images/client1.png';
+// import slide7 from '@/assets/images/client2.png';
+// import slide8 from '@/assets/images/client4.png';
+// import slide9 from '@/assets/images/client3.png';
+// import slide10 from '@/assets/images/client2.png';
 
 
 const carousel = ref(null);

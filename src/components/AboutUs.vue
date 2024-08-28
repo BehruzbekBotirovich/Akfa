@@ -12,7 +12,9 @@
                 </div>
                 <div class="filter"></div>
                 <div class="bg-img"><img src='../assets/images/RecBg1.png' alt=""></div>
-                <button class="more-info"> Подробнее</button>
+                <button class="more-info">
+                    <LongArrow></LongArrow>
+                </button>
             </div>
 
             <div class="card" @click="showModal(2)" data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
@@ -26,7 +28,9 @@
                 </div>
                 <div class="filter"></div>
                 <div class="bg-img bottom-0"><img src='../assets/images/RecBg2.png' alt=""></div>
-                <button class="more-info"> Подробнее</button>
+                <button class="more-info">
+                    <LongArrow></LongArrow>
+                </button>
             </div>
 
             <div class="card" @click="showModal(3)" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">
@@ -40,7 +44,9 @@
                 </div>
                 <div class="filter"></div>
                 <div class="bg-img"><img src='../assets/images/RecBg3.png' alt=""></div>
-                <button class="more-info"> Подробнее</button>
+                <button class="more-info">
+                    <LongArrow></LongArrow>
+                </button>
             </div>
 
             <div class="card" @click="showModal(4)" data-aos="fade-left" data-aos-duration="500" data-aos-delay="400">
@@ -55,7 +61,9 @@
                 </div>
                 <div class="filter"></div>
                 <div class="bg-img"><img src='../assets/images/RecBg4.png' alt=""></div>
-                <button class="more-info"> Подробнее</button>
+                <button class="more-info">
+                    <LongArrow></LongArrow>
+                </button>
             </div>
         </div>
 
@@ -85,6 +93,8 @@ import ServiseWindow from './windows/ServiseWindow.vue';
 import BalkonWindow from './windows/BalkonWindow.vue'
 import ObjsetWindow from './windows/ObjsetWindow.vue'
 import SetupWindow from './windows/SetupWindow.vue'
+// icon
+import LongArrow from '../components/icons/LongArrow.vue'
 const modals = ref({
     1: false,
     2: false,
@@ -141,7 +151,19 @@ function handleOk(modalNumber) {
 
 .card:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 }
+
+:deep(.card:hover .more-info>div>svg>path) {
+    stroke: orange;
+    transition: all 0.3s;
+}
+
+:deep(.card:hover .more-info>div>svg) {
+    width: 60px;
+    transition: all 0.3s;
+}
+
 
 .bg-img {
     position: absolute;

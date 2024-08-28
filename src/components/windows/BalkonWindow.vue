@@ -11,13 +11,6 @@
                 <h2>Остекление балконов и лоджий </h2>
                 <p>Занимаемся остеклением и отделкой балконов и лоджий. Теплое и холодное остекление, изготовление
                     выносов и крыш. Беремся за сложные объекты</p>
-
-                <div class="flex gap-4">
-                    <a-button type="primary" @click="showZamer = true"
-                        class="flex items-center gap-2  w-1/2 justify-center h-12 rounded font-semibold text-white bg-orange-500">
-                        <ZamerIcon></ZamerIcon> Заявка на замер
-                    </a-button>
-                </div>
             </div>
         </div>
         <!-- info cards -->
@@ -93,7 +86,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import ZamerIcon from '../icons/ZamerIcon.vue'
 
 import balkon1 from '@/assets/slide_images/steklo1.jpg'
 import balkon2 from '@/assets/slide_images/steklo2.jpg'

@@ -1,45 +1,18 @@
 <template>
-    <div class="main-container mb-16">
-        <h1 class="text-center text-3xl text-gray-900 font-semibold py-12">О компании</h1>
-        <ul class="navbar">
-            <li :class="{ active: about }" @click="showSection('about')">Описание</li>
-            <li :class="{ active: how }" @click="showSection('how')">Как мы работаем</li>
-            <li :class="{ active: sertifi }" @click="showSection('sertifi')">Сертификаты</li>
-        </ul>
+    <div class="main-container mb-16 mt-12">
+        <HowWorking />
 
-        <transition name="fade">
-            <AboutCompany v-if="about" />
-        </transition>
-
-        <transition name="fade">
-            <HowWorking v-if="how" />
-        </transition>
-
-
-
-        <transition name="fade">
-            <SertificateSlider v-if="sertifi" />
-        </transition>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import AboutCompany from './windows/AboutCompany.vue'
 import HowWorking from './windows/HowWorking.vue'
-import SertificateSlider from './windows/SertificateSlider.vue'
 
-const about = ref(true)
-const how = ref(false)
-const otziv = ref(false)
-const sertifi = ref(false)
 
-const showSection = (section) => {
-    about.value = section === 'about'
-    how.value = section === 'how'
-    otziv.value = section === 'otziv'
-    sertifi.value = section === 'sertifi'
-}
+
+
+
 </script>
 
 <style scoped>

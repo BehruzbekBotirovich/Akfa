@@ -12,13 +12,7 @@
                 <p> Остекление и отделка под ключ: от коттеджей и дач до террас и беседок. Выделяем личного
                     технолога под каждый объект.</p>
 
-                <div class="flex gap-4">
-                    <a-button type="primary" @click="showZamer = true"
-                        class="flex items-center gap-2  w-1/2 justify-center h-12 rounded font-semibold text-white bg-orange-500">
-                        <ZamerIcon></ZamerIcon> Заявка на замер
-                    </a-button>
-
-                </div>
+               
             </div>
         </div>
         <!-- info cards -->
@@ -97,7 +91,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import ZamerIcon from '../icons/ZamerIcon.vue'
 
 import dacha1 from '@/assets/slide_images/dacha1.jpg'
 import dacha2 from '@/assets/slide_images/dacha2.jpg'

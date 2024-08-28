@@ -10,13 +10,6 @@
             <div class="text-content">
                 <h2>Установка пластиковых окон</h2>
                 <p>Пластиковые окна Akfa от проверенного производителя с гарантией качества</p>
-                <div class="flex gap-4">
-                    <a-button type="primary" @click="showZamer = true"
-                        class="flex items-center gap-2  justify-center h-12 rounded font-semibold text-white bg-orange-500">
-                        <ZamerIcon></ZamerIcon> Заявка на замер
-                    </a-button>
-
-                </div>
             </div>
         </div>
         <!-- info cards -->
@@ -92,8 +85,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import ZamerIcon from '../icons/ZamerIcon.vue'
-import SchyotIcon from '../icons/SchyotIcon.vue'
+
 import oyna1 from '@/assets/slide_images/oyna1.jpg'
 import oyna2 from '@/assets/slide_images/oyna2.jpg'
 import oyna3 from '@/assets/slide_images/oyna3.jpg'
