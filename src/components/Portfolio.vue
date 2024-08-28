@@ -30,7 +30,7 @@
 import { ref, onMounted,  } from 'vue';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons-vue';
 const images = ref([
-    slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13, slide14
+    slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13, slide14, slide15,  slide16,slide17, slide18, slide19, slide20, slide21, slide22
 ]);
 
 import slide1 from '@/assets/slide_images/slide1.jpg';
@@ -47,6 +47,14 @@ import slide11 from '@/assets/slide_images/slide11.jpg';
 import slide12 from '@/assets/slide_images/slide12.jpg';
 import slide13 from '@/assets/slide_images/slide13.jpg';
 import slide14 from '@/assets/slide_images/slide14.jpg';
+import slide15 from '@/assets/slide_images/slide15.jpg';
+import slide16 from '@/assets/slide_images/slide16.jpg';
+import slide17 from '@/assets/slide_images/slide17.jpg';
+import slide18 from '@/assets/slide_images/slide18.jpg';
+import slide19 from '@/assets/slide_images/slide19.jpg';
+import slide20 from '@/assets/slide_images/slide20.jpg';
+import slide21 from '@/assets/slide_images/slide21.jpg';
+import slide22 from '@/assets/slide_images/slide22.jpg';
 
 const carousel = ref(null);
 

@@ -1,7 +1,7 @@
 <template>
 
     <h1 class="text-3xl text-center mb-12 mt-8 font-semibold text-gray-800">Продукции</h1>
-    <Carousel></Carousel>
+    <ProductsSlider></ProductsSlider>
     <div class="bg-img my-container mb-14 relative">
         <div class="main-container  relative  ">
             <div class="relative text-white  mb-16" style="z-index: 2;">
@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import Carousel from './UI/Carousel.vue'
+import ProductsSlider from './Products.vue'
 import SchyotIcon from './icons/SchyotIcon.vue'
 import ZamerWindow from './windows/ZamerWindow.vue';
 import { ref } from 'vue';

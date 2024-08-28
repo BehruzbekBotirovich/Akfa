@@ -6,7 +6,7 @@
             <!-- addффф -->
             <div class="content relative lg:w-1/2 mb-2" style="z-index: 3;">
                 <h1 data-aos="fade-right" data-aos-duration="500" data-aos-delay="200"
-                    class="text-bold text-4xl text-cyan-200">Glass Pro -</h1>
+                    class="text-bold text-4xl text-cyan-200">Hi-TechGlass</h1>
                 <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="200"
                     class="sm:text-2xl lg:text-5xl font-semibold text-white"> Профессиональный подход к остеклению</p>
                 <div class="flex justify-between gap-4  sm:mt-6 lg:mt-12">

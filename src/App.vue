@@ -7,7 +7,6 @@ import AboutUs from './components/AboutUs.vue'
 import AboutProduct from './components/AboutProduct.vue'
 import Workings from './components/Workings.vue'
 import Portfolio from './components/Portfolio.vue'
-import FaqAsk from './components/FaqAsk.vue'
 import ContactUs from './components/ContactUs.vue'
 import FooterEnd from './components/FooterEnd.vue'
 import Map from './components/Map.vue'
@@ -22,8 +21,6 @@ import Banner2 from './components/Banner2.vue'
     <div id="about-us">
         <AboutUs></AboutUs>
     </div>
-
-
     <div id="product">
         <AboutProduct></AboutProduct>
     </div>
@@ -35,9 +32,6 @@ import Banner2 from './components/Banner2.vue'
     <Portfolio></Portfolio>
     <Banner2></Banner2>
     <OurCustomers></OurCustomers>
-    <div id="faq">
-        <FaqAsk></FaqAsk>
-    </div>
     <Map />
     <div id="contact">
         <ContactUs></ContactUs>

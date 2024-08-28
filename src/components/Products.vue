@@ -10,23 +10,34 @@
                     </div>
                     <div class="  w-1/2  md:px-8 py-4 md:py-12 ">
                         <h1 class="text-orange-500  md:mb-6 text-3xl  font-semibold"></h1>
-                        <p class="md:w-2/3 mb-2 md:mb-6 font-semibold">{{ item.name }}</p>
+                        <p class="md:w-2/3 mb-2 md:mb-6 text-xl font-semibold">{{ item.name }}</p>
                         <!-- parametri -->
                         <div class="line">
-                            <span>Монтажная глубина: </span>
+                            <span> Количество камер: </span>
+                            <div class="dots"></div>
+                            <span> {{ item.camers }}</span>
+                        </div>
+                        <div class="line">
+                            <span>Монтажная глубина рамы: </span>
                             <div class="dots"></div>
                             <span> {{ item.montaj }}</span>
                         </div>
+
                         <div class="line">
-                            <span>Толщина внешних стенок: </span>
+                            <span>Толщина стеклопакета: </span>
                             <div class="dots"></div>
-                            <span>{{ item.weight }}</span>
+                            <span> {{ item.widthSteklopaket }}</span>
+                        </div>
+                        <div class="line">
+                            <span>Толщина армирующего профиля:</span>
+                            <div class="dots"></div>
+                            <span>{{ item.widthAramture }}</span>
                         </div>
 
                         <div class="line">
-                            <span>Толщина остекления: </span>
+                            <span>Максимальный вес створки : </span>
                             <div class="dots"></div>
-                            <span>{{ item.width }}</span>
+                            <span>{{ item.maxWeight }}</span>
                         </div>
                     </div>
                 </div>
@@ -58,16 +69,52 @@
 
 <script setup>
 import { ref } from 'vue';
+// images
+import quatro5800 from '@/assets/images/quatro5800.png'
+import engelberg7000 from '@/assets/images/engelberg7000.png'
+import quatro6000 from '@/assets/images/quattro6000.png'
+import trio6000 from '@/assets/images/trio6000.png'
+
 const carousel = ref(null);
 
 const items = [
     {
-        name: "THERMO 64 — ТЁПЛАЯ СЕРИЯ ",
-        img: 'https://akfa.com.ua/wp-content/uploads/2018/02/main-bd38184ee5.png',
-        montaj: '64 мм',
-        weight: "1.2-1.5-2.0 мм",
-        width: "20-32 мм"
-    }
+        name: "Engelberg 7000",
+        img: engelberg7000,
+        montaj: '70 мм',
+        camers: 5,
+        widthSteklopaket: "6мм / 20мм",
+        widthAramture: '2,0мм',
+        maxWeight: '(Окна / Двери): 60 кг / 100 кг'
+    },
+    {
+        name: "Trio 6000 ",
+        img: trio6000,
+        montaj: '60 мм',
+        camers: 3,
+        widthSteklopaket: "6мм / 20мм",
+        widthAramture: '1,2мм',
+        maxWeight: '(Окна / Двери): 80кг / 110кг'
+    },
+    {
+        name: "Quatro 5800 ",
+        img: quatro5800,
+        montaj: '52 мм',
+        camers: 4,
+        widthSteklopaket: "6мм / 20мм",
+        widthAramture: '1,2мм',
+        maxWeight: '(Окна / Двери): 60 кг / 100 кг'
+    },
+    {
+        name: "Quatro 6000",
+        img: quatro6000,
+        montaj: '60 мм',
+        camers: 4,
+        widthSteklopaket: "6мм / 20мм",
+        widthAramture: '1,2мм',
+        maxWeight: '(Окна / Двери): 70 кг / 110 кг'
+    },
+
 ]
 
 const next = () => {
