@@ -1,14 +1,14 @@
 <template>
-    <div class="relative main-container mb-12   ">
+    <div class="relative main-container mb-12 mt-6  ">
 
         <a-carousel ref="carousel" dots="false" class="w4 self-center" :infinite="true">
             <div v-for="(item, index) in items" :key="index">
                 <div class="my-slide ">
-                    <div class=" w-1/2">
+                    <div class=" md:w-1/2">
                         <a-image class="slide-rasm  md:w-full md:h-full object-contain aspect-square"
                             :src="item.img"></a-image>
                     </div>
-                    <div class="  w-1/2  md:px-8 py-4 md:py-12 ">
+                    <div class="md:w-1/2  md:px-8 py-4 md:py-12 ">
                         <h1 class="text-orange-500  md:mb-6 text-3xl  font-semibold"></h1>
                         <p class="md:w-2/3 mb-2 md:mb-6 text-xl font-semibold">{{ item.name }}</p>
                         <!-- parametri -->
@@ -169,7 +169,7 @@ const prev = () => {
     border-radius: 5px;
 
     @media(max-width:760px) {
-        /* display: block; */
+        display: block;
     }
 }
 
@@ -185,6 +185,8 @@ const prev = () => {
 
     @media(max-width:760px) {
         font-size: 14px;
+        white-space: wrap;
+        align-items: center
     }
 }
 
@@ -195,6 +197,10 @@ const prev = () => {
     height: 0;
     position: relative;
     top: 14px;
+
+    @media (max-width:610px) {
+        display: none;
+    }
 }
 
 :deep(.slick-dots li button) {
