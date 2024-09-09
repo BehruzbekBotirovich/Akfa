@@ -32,8 +32,8 @@
             </div>
 
             <!-- форма -->
-            <div class="relative z-10 bg-white   p-4 md:px-16 md:pt-10 md:pb-4 lg:w-1/3  rounded-xl" data-aos="fade-left"
-                data-aos-duration="500" data-aos-delay="200">
+            <div class="relative z-10 bg-white   p-4 md:px-16 md:pt-10 md:pb-4 lg:w-1/3  rounded-xl"
+                data-aos="fade-left" data-aos-duration="500" data-aos-delay="200">
                 <h1 class="font-bold text-lg text-center">Вызвать замерщика</h1>
                 <a-form :model="form" :rules="rules" ref="formRef" layout="vertical" @submit.prevent="submitForm">
                     <a-form-item label="Имя" name="name">
@@ -44,7 +44,7 @@
                     </a-form-item>
                     <a-form-item label="Телефон" name="tel">
                         <a-input v-model:value="form.tel" class="bg-gray-100 h-12" placeholder="Ваш номер телефона" />
-                    </a-form-item>
+                  npm  </a-form-item>
                     <a-form-item class="flex justify-center ">
                         <a-button type="primary" @click="submitForm" html-type="submit" class="mt-4 px-10 h-12">
                             Отправить сообщение
